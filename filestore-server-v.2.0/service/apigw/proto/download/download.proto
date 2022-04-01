@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package download;
+
+option go_package = "./;download";
+
+service Download{
+	rpc DownloadEntry(ReqEntry)returns(RespEntry){}
+}
+
+message ReqEntry{
+
+}
+
+message RespEntry{
+	int32 code = 1;
+	string message = 2;
+	string entry = 3;
+}
